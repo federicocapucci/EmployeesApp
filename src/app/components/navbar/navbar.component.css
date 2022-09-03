@@ -1,0 +1,9 @@
+span{
+    margin:auto;
+    text-align: center;    
+}
+
+mat-toolbar{
+    min-width: 300px;
+    width: 100vw;
+}

@@ -1,0 +1,74 @@
+<div class="container"><div class="row">
+    <div class="col-lg-6">
+        <h2>
+            <h2>{{action}} employee</h2>
+        </h2> </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">        
+        <form autocomplete="off" [formGroup]="myForm">
+            <div class="column-lg-12">
+                <mat-form-field class="example-container" [style.fontSize.px]='18'>
+                    <mat-label>Full Name</mat-label>
+                    <input matInput placeholder="John Smith" formControlName="name" >
+                    <mat-error *ngIf="myForm.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="column-lg-12">
+                <mat-form-field class="example-container" [style.fontSize.px]='18'>
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" formControlName="email">
+                    <mat-error *ngIf="myForm.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <br><br> <br>
+            <div class="column-lg-12">
+                <mat-form-field class="example-full-width" class="example-container" [style.fontSize.px]='18'>
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="joinDate">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #picker></mat-datepicker>
+                    <mat-error *ngIf="myForm.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="column-lg-12">
+                <mat-form-field class="example-container" [style.fontSize.px]='18'>
+                    <mat-label>Enter your Phone</mat-label>
+                    <input matInput placeholder="555" 
+                    formControlName="phone">
+                    <mat-error *ngIf="myForm.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="column-lg-12">                
+                <mat-form-field class="example-container" [style.fontSize.px]='18'>
+                  <mat-label>Marital Status</mat-label>
+                  <mat-select  formControlName="maritalStatus">
+                    <mat-option value="married">Married</mat-option>
+                    <mat-option value="single">Single</mat-option>
+                    <mat-option value="other">Other</mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="column-lg-12">
+                <mat-form-field class="example-container" [style.fontSize.px]='18'>
+                    <mat-label>Sex</mat-label>
+                    <mat-select   formControlName="sex">
+                      <mat-option value="masculine">Masculine</mat-option>
+                      <mat-option value="feminine">Feminine</mat-option>
+                      <mat-option value="other">Other</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="column-lg-12">
+                <button mat-flat-button color="warn" (click)="saveEmployee()" [disabled]="!myForm.valid"> Save </button>
+                <button mat-stroked-button color="warn" routerLink="/"> Cancel </button>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-4 offset-lg-2">
+        <img src="../../../assets/IMGs/newEmployee.jpg" alt="new Employee">
+    </div>
+</div>
+</div>
