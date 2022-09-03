@@ -58,8 +58,7 @@ export class ListEmployeesComponent implements OnInit, AfterViewInit {
 
   loadEmployees() {
     this.listEmployees = this._employeeService.getEmployees();
-    this.dataSource = new MatTableDataSource(this.listEmployees);
-    console.log(this.listEmployees)
+    this.dataSource = new MatTableDataSource(this.listEmployees);    
   }
 
   deleteEmployee(index: number) {
