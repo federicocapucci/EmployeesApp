@@ -1,5 +1,10 @@
 # EmployeesApp
 
+Angular app which allows the input, management and edition of employees. created with Angular Material, using Reactive forms, Routing, Bootstrap, etc.
+
+<img src="https://i.imgur.com/ijGylrQ.png" alt="app add employee screenshot">
+<img src="https://i.imgur.com/5ujS31s.png" alt="app list screenshot">
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
 
 ## Development server
